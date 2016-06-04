@@ -9,7 +9,7 @@ var getMessage = function() {
   //   var tpl = $("#list-tpl").html();
   //   var html = juicer(tpl, tplData);
   //   $("body").html(html);
-  // });
+  // })
 
   var url = "post.html";
   var postData = {};
