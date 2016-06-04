@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/juicer.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    <title>公共仓库</title>
+  </head>
+  <body>
+    <a href="javascript: void(0)" class="delete-all-button">批量删除</a>
+    <table id="list-content">
+      <tr>
+        <th></th>
+        <th>文件名称</th>
+        <th>文件类型</th>
+        <th>文件大小</th>
+        <th>创建人</th>
+        <th>创建时间</th>
+        <th>操作</th>
+      </tr>
+    </table>
+  </body>
+  <script type="text/template" id="list-tpl">
+    {@each list as item}
+      <tr>
+        <td><input type="checkbox" data-id="${item.id}"/></td>
+        <td>${item.fileName}</td>
+        <td>${item.type}</td>
+        <td>${item.size}</td>
+        <td>${item.creater}</td>
+        <td>${item.gmtCreate}</td>
+        <td><a href="javascript:void(0)" class="delete-button"  data-id="${item.id}">删除</a></td>
+      </tr>
+    {@/each}
+  </script>
+</html>
